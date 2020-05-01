@@ -71,6 +71,38 @@ When you start working on a new feature or fixing a new issue, you want to start
 git checkout -b feature/sdc-yao-20
 ```
 
+
+# And that's how you can commit code!
+
+This was just to cover the absolute basics of how to use Github to commit your code and work on it collaboratively. The following information are more exercises on additional aspects and there's a lot of other things that you do need to know, I just wanted to cover the basics.
+
+Here's the cheat sheet that will help and guide you: https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf
+
+# Stashing your code
+If you worked on some code and a team member said they pushed some changes so you need to git pull, but you still have some work that you don't want impacted? 
+```
+git stash
+```
+Use git stash when you want to record the current state of the working directory and the index, but want to go back to a clean working directory. The command saves your local modifications away and reverts the working directory to match the HEAD commit.
+
+Another good one is:
+```
+git stash pop
+```
+pop [--index] [-q|--quiet] [<stash>]
+Remove a single stashed state from the stash list and apply it on top of the current working tree state, i.e., do the inverse operation of git stash push. The working directory must match the index.
+
+Applying the state can fail with conflicts; in this case, it is not removed from the stash list. You need to resolve the conflicts by hand and call git stash drop manually afterwards.
+
+All the other git stash commands are in here: https://git-scm.com/docs/git-stash#Documentation/git-stash.txt-pop--index-q--quietltstashgt
+
+# Branching
+
+When you start working on a new feature or fixing a new issue, you want to start your work in a new **branch**. You'll want to name it accordingly: sdc, first 3 letters of surname, 20. For example, sdc-yao-20
+
+```
+git checkout -b feature/sdc-yao-20
+```
 Let's add a file now
 
 ```
@@ -121,30 +153,6 @@ git push --set-upstream origin feature/sdc-yao-20
 This will make sure the branch and the changes will be pushed to your repository on Github.
 
 Your change is now in the 'master' branch of your repository and you should see a new file in the *Code* section. You can also view the content of the file by clicking on it.
-
-# And that's how you can commit code!
-
-This was just to cover the absolute basics of how to use Github to commit your code and work on it collaboratively. The following information are more exercises on additional aspects and there's a lot of other things that you do need to know, I just wanted to cover the basics.
-
-Here's the cheat sheet that will help and guide you: https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf
-
-# Stashing your code
-If you worked on some code and a team member said they pushed some changes so you need to git pull, but you still have some work that you don't want impacted? 
-```
-git stash
-```
-Use git stash when you want to record the current state of the working directory and the index, but want to go back to a clean working directory. The command saves your local modifications away and reverts the working directory to match the HEAD commit.
-
-Another good one is:
-```
-git stash pop
-```
-pop [--index] [-q|--quiet] [<stash>]
-Remove a single stashed state from the stash list and apply it on top of the current working tree state, i.e., do the inverse operation of git stash push. The working directory must match the index.
-
-Applying the state can fail with conflicts; in this case, it is not removed from the stash list. You need to resolve the conflicts by hand and call git stash drop manually afterwards.
-
-All the other git stash commands are in here: https://git-scm.com/docs/git-stash#Documentation/git-stash.txt-pop--index-q--quietltstashgt
 
 # Fixing an issue
 
