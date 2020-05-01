@@ -34,7 +34,9 @@ For more options, there are instructions for installing on several different Uni
 ## Windows
 There are different ways to get it downloaded through Windows
 A. Just go to https://git-scm.com/download/win and the download will start automatically.
+
 B. To get an automated installation you can use the Git Chocolatey package. Note that the Chocolatey package is community maintained.
+
 C. Install Github Desktop (https://desktop.github.com/) The installer includes a command line version of Git as well as the GUI. It also works well with PowerShell, and sets up solid credential caching and sane CRLF settings. 
 
 # Git Configuration
