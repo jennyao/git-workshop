@@ -6,7 +6,7 @@ Example repo for git workshop
 You will need a Github account for this exercise. If you do not have it yet, you can go to https://github.com/join and sign up.
 Once you have it or already have it, send me your username so I can add you as a collaborator to this.
 
-# Install
+# Install Git
 
 ## Linux
 If you want to install the basic Git tools on Linux via a binary installer, you can generally do so through the package management tool that comes with your distribution. If you’re on Fedora (or any closely-related RPM-based distribution, such as RHEL or CentOS), you can use dnf:
@@ -128,7 +128,25 @@ This was just to cover the absolute basics of how to use Github to commit your c
 
 Here's the cheat sheet that will help and guide you: https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf
 
-## Fixing an issue
+# Stashing your code
+If you worked on some code and a team member said they pushed some changes so you need to git pull, but you still have some work that you don't want impacted? 
+```
+git stash
+```
+Use git stash when you want to record the current state of the working directory and the index, but want to go back to a clean working directory. The command saves your local modifications away and reverts the working directory to match the HEAD commit.
+
+Another good one is:
+```
+git stash pop
+```
+pop [--index] [-q|--quiet] [<stash>]
+Remove a single stashed state from the stash list and apply it on top of the current working tree state, i.e., do the inverse operation of git stash push. The working directory must match the index.
+
+Applying the state can fail with conflicts; in this case, it is not removed from the stash list. You need to resolve the conflicts by hand and call git stash drop manually afterwards.
+
+All the other git stash commands are in here: https://git-scm.com/docs/git-stash#Documentation/git-stash.txt-pop--index-q--quietltstashgt
+
+# Fixing an issue
 
 We have promoted an issue to `master` branch - the new file `feature.txt` actually contains text `New creature` instead of `New feature`, which is not good. We need to fix it now. First, we need to create an issue on Github. 
 
